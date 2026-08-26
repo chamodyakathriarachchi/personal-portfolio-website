@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Space Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+  <div id="starBackground" class="star-bg"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="utility-container nav-container">
+      <a href="#hero" class="logo"><span class="text-glow">PedroTech</span> Portfolio</a>
+      
+      <div class="nav-right-wrapper">
+        <div class="nav-links" id="desktopNavLinks">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <button class="theme-toggle" id="themeToggleBtn" aria-label="Toggle Theme">
+          <svg class="sun-icon" xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+
+        <button class="hamburger-menu" id="mobileMenuToggle" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="utility-container hero-container">
+        <h1>
+          <span class="animate-fade-in">Hi, I'm</span>
+          <span class="text-primary animate-fade-in delay-1">Pedro</span>
+          <span class="animate-fade-in delay-2" style="color: var(--foreground);">Machado</span>
+        </h1>
+        <p class="animate-fade-in delay-3">I create stellar web experiences with modern web dev technologies.</p>
+        <div class="animate-fade-in delay-4">
+          <a href="#projects" class="cosmic-button">View My Work</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="utility-container">
+        <h2 class="section-title">About <span class="text-primary">Me</span></h2>
+        <div class="about-grid">
+          <div class="about-left">
+            <h3>Passionate web developer & tech creator</h3>
+            <p>I build clean, responsive, and highly interactive frontend experiences.</p>
+            <div class="about-buttons">
+              <a href="#contact" class="cosmic-button">Get in Touch</a>
+              <a href="#" class="cv-button">Download CV</a>
+            </div>
+          </div>
+          <div class="about-right">
+            <div class="gradient-border card-hover">
+              <div class="card-content">
+                <div class="icon-wrapper"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <div>
+                  <h4>Web Development</h4>
+                  <p>Creating responsive applications with modern frameworks.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="utility-container">
+        <h2 class="section-title">My <span class="text-primary">Skills</span></h2>
+        <div class="skills-grid">
+          <div class="gradient-border card-hover">
+            <div class="skill-card">
+              <h3>ReactJS</h3>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 90%;"></div>
+              </div>
+              <span class="skill-percentage">90%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="utility-container">
+        <h2 class="section-title">Featured <span class="text-primary">Projects</span></h2>
+        <p class="section-subtitle">Here are some of my recent software projects.</p>
+        <div class="projects-grid">
+          <div class="project-card card-hover">
+            <div class="project-image-wrapper">
+              <img src="https://unsplash.com" alt="Project Banner">
+            </div>
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Tailwind</span>
+              </div>
+              <h3>SaaS Landing Page</h3>
+              <p>A beautiful cosmic landing page web application.</p>
+              <div class="project-links">
+                <a href="#" target="_blank"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="utility-container">
+        <h2 class="section-title">Get in <span class="text-primary">Touch</span></h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="info-item">
+              <div class="icon-wrapper"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <h3>Send a Message</h3>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="Pedro Machado">
+              </div>
+              <button type="submit" class="cosmic-button" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 PedroTech. All rights reserved.</p>
+    <a href="#hero" class="scroll-top-btn">
+      <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
