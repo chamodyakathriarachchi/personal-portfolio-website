@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   filterButtons.forEach(button => {
     button.addEventListener("click", () => {
-      // Remove active selector state from old buttons
       filterButtons.forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
 
@@ -77,3 +76,5 @@ function generateStars() {
 }
 generateStars();
 window.addEventListener('resize', generateStars);
+
+
