@@ -298,9 +298,10 @@
         <h2 class="section-title">Featured <span class="text-primary">Projects</span></h2>
         <p class="section-subtitle">Here are some of my recent software projects.</p>
         <div class="projects-grid">
+
           <div class="project-card card-hover">
             <div class="project-image-wrapper">
-              <img src="https://unsplash.com" alt="Project Banner">
+              <img src="assets/projects/SaaS.png" alt="Project Banner">
             </div>
             <div class="project-details">
               <div class="project-tags">
@@ -312,11 +313,72 @@
               <div class="project-links">
                 <a href="#" target="_blank"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
               </div>
-            </div>
+            </div> 
           </div>
+
+          <div class="project-card card-hover">
+            <div class="project-image-wrapper">
+              <img src="assets/projects/QuantumLedger.png" alt="Project Banner">
+            </div>
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">WebSockets</span>
+              </div>
+              <h3>Quantum Ledger</h3>
+              <p>A real-time data streaming dashboard designed for monitoring blockchain node behaviors, tracking distributed database lag metrics, and micro-second data pipelining.</p>
+              <div class="project-links">
+                <a href="#" target="_blank"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+              </div>
+            </div> 
+          </div>
+
+          <div class="project-card card-hover">
+            <div class="project-image-wrapper">
+              <img src="assets/projects/NovaCore.png" alt="Project Banner">
+            </div>
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tag">GO</span>
+                <span class="tag">RUST</span>
+                <span class="tag">gRPC</span>
+              </div>
+              <h3>NovaCore Engine</h3>
+              <p>An ultra-low latency serverless compiler utility optimized for system edge networks. It isolates system environment clusters and handles asynchronous file parsing smoothly.</p>
+              <div class="project-links">
+                <a href="#" target="_blank"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+              </div>
+            </div> 
+          </div>
+
+          <div class="project-card card-hover">
+            <div class="project-image-wrapper">
+              <img src="assets/projects/OrbitSync.png" alt="Project Banner">
+            </div>
+            <div class="project-details">
+              <div class="project-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">SQLite</span>
+              </div>
+              <h3>OrbitSync</h3>
+              <p>A cross-platform cloud file-synchronization tool utilizing secure peer-to-peer connection hashes. It enables lightning-fast local asset management on the move.</p>
+              <div class="project-links">
+                <a href="#" target="_blank"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>
+              </div>
+            </div> 
+          </div>
+
         </div>
       </div>
     </section>
+
+    <div id="projectModal" class="project-modal">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content-img" id="modalTargetImg" src="" alt="Project Preview">
+    </div>
+
 
     <section id="contact" class="contact-section">
       <div class="utility-container">

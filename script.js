@@ -132,3 +132,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const projectCards = document.querySelectorAll(".project-card");
+  const modal = document.getElementById("projectModal");
+  const modalImg = document.getElementById("modalTargetImg");
+  const closeBtn = document.querySelector(".modal-close");
+
+  projectCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const targetCardImg = card.querySelector(".project-image-wrapper img");
+      if (targetCardImg) {
+        modal.style.display = "block";
+        modalImg.src = targetCardImg.src;
+        modalImg.alt = targetCardImg.alt || "Project Preview";
+        document.body.style.overflow = "hidden"; 
+      }
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; 
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+});
