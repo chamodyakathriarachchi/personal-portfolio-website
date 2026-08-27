@@ -163,3 +163,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailLink = document.getElementById("portfolioEmailLink");
+  const copyToast = document.getElementById("emailCopyToast");
+
+  if (emailLink && copyToast) {
+    emailLink.addEventListener("click", (event) => {
+      const emailAddress = "chamodyakathriarachchi24@gmail.com";
+      
+      navigator.clipboard.writeText(emailAddress).then(() => {
+        copyToast.style.opacity = "1";
+        
+        setTimeout(() => {
+          copyToast.style.opacity = "0";
+        }, 2500);
+      }).catch(err => {
+        console.error("Clipboard copy action interrupted: ", err);
+      });
+    });
+  }
+});
