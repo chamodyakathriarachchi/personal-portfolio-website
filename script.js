@@ -12,6 +12,22 @@ window.addEventListener('scroll', () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollTopBtn = document.querySelector(".scroll-top-btn");
+
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", (event) => {
+      event.preventDefault(); 
+      
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
+});
+
+
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const mobileNavOverlay = document.getElementById('mobileNavOverlay');
 const mobileLinks = document.querySelectorAll('.mobile-links a');
@@ -77,4 +93,42 @@ function generateStars() {
 generateStars();
 window.addEventListener('resize', generateStars);
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".skill-bar-fill");
+
+  const skillObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-now");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { 
+    root: null,
+    rootMargin: "0px 0px -50px 0px",
+    threshold: 0.01 
+  });
+
+  progressBars.forEach(bar => skillObserver.observe(bar));
+
+  setTimeout(() => {
+    progressBars.forEach(bar => {
+      const rect = bar.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        bar.classList.add("animate-now");
+      }
+    });
+  }, 200);
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      setTimeout(() => {
+        const visibleBars = document.querySelectorAll(".skill-item[style*='block'] .skill-bar-fill, .skill-item:not([style*='none']) .skill-bar-fill");
+        visibleBars.forEach(bar => bar.classList.add("animate-now"));
+      }, 50);
+    });
+  });
+});
 
