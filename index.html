@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Space Portfolio</title>
+  <title>Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body class="dark">
 
@@ -12,7 +13,7 @@
 
   <nav class="navbar" id="navbar">
     <div class="utility-container nav-container">
-      <a href="#hero" class="logo"><span class="text-glow">PedroTech</span> Portfolio</a>
+      <a href="#hero" class="logo"><span class="text-glow"></span> Portfolio</a>
       
       <div class="nav-right-wrapper">
         <div class="nav-links" id="desktopNavLinks">
@@ -51,8 +52,8 @@
       <div class="utility-container hero-container">
         <h1>
           <span class="animate-fade-in">Hi, I'm</span>
-          <span class="text-primary animate-fade-in delay-1">Pedro</span>
-          <span class="animate-fade-in delay-2" style="color: var(--foreground);">Machado</span>
+          <span class="text-primary animate-fade-in delay-1">Chamodya</span>
+          <span class="animate-fade-in delay-2" style="color: var(--foreground);">Kathriarachchi</span>
         </h1>
         <p class="animate-fade-in delay-3">I create stellar web experiences with modern web dev technologies.</p>
         <div class="animate-fade-in delay-4">
@@ -95,17 +96,118 @@
     <section id="skills" class="skills-section">
       <div class="utility-container">
         <h2 class="section-title">My <span class="text-primary">Skills</span></h2>
-        <div class="skills-grid">
-          <div class="gradient-border card-hover">
+        <div class="skills-filter-container">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+        <div class="skills-grid" id="skillsGrid">
+
+          <div class="gradient-border card-hover skill-item" data-category="frontend">
             <div class="skill-card">
-              <h3>ReactJS</h3>
+              <div class="skill-header">
+                <img src="assets/icons/html.png" alt="HTML5 Logo" class="tech-logo-img">
+                <h3>HTML5 & CSS3</h3>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 95%;"></div>
+              </div>
+              <span class="skill-percentage">95%</span>
+            </div>
+          </div>
+
+          <div class="gradient-border card-hover skill-item" data-category="frontend">
+            <div class="skill-card">
+              <div class="skill-header">
+                <img src="assets/icons/react.png" alt="ReactJS Logo" class="tech-logo-img">
+                <h3>ReactJS</h3>
+              </div>
               <div class="skill-bar-container">
                 <div class="skill-bar-fill animate-grow" style="width: 90%;"></div>
               </div>
               <span class="skill-percentage">90%</span>
             </div>
           </div>
-        </div>
+
+          <div class="gradient-border card-hover skill-item" data-category="frontend">
+            <div class="skill-card">
+              <div class="skill-header">
+                <img src="assets/icons/js.png" alt="JavaScript Logo" class="tech-logo-img">
+                <h3>JavaScript</h3>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 85%;"></div>
+              </div>
+              <span class="skill-percentage">85%</span>
+            </div>
+          </div>
+
+          <div class="gradient-border card-hover skill-item" data-category="frontend">
+            <div class="skill-card">
+              <div class="skill-header">
+                <img src="assets/icons/css-3.png" alt="CSS Logo" class="tech-logo-img">
+                <h3>Tailwind CSS</h3>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 80%;"></div>
+              </div>
+              <span class="skill-percentage">80%</span>
+            </div>
+          </div>
+
+          <div class="gradient-border card-hover skill-item" data-category="backend">
+            <div class="skill-card">
+              <div class="skill-header">
+                <img src="assets/icons/nodejs.png" alt="NodeJs Logo" class="tech-logo-img">
+                <h3>Node.js</h3>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 70%;"></div>
+              </div>
+              <span class="skill-percentage">70%</span>
+            </div>
+          </div>
+
+          <div class="gradient-border card-hover skill-item" data-category="backend">
+            <div class="skill-card">
+              <div class="skill-header">
+                <img src="assets/icons/php.png" alt="php Logo" class="tech-logo-img">
+                <h3>PhP</h3>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 50%;"></div>
+              </div>
+              <span class="skill-percentage">50%</span>
+            </div>
+          </div>
+
+          <div class="gradient-border card-hover skill-item" data-category="tools">
+            <div class="skill-card">
+              <div class="skill-header">
+                <img src="assets/icons/github.png" alt="GitHub Logo" class="tech-logo-img">
+                <h3>Git & GitHub</h3>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 88%;"></div>
+              </div>
+              <span class="skill-percentage">88%</span>
+            </div>
+          </div>
+
+          <div class="gradient-border card-hover skill-item" data-category="tools">
+            <div class="skill-card">
+              <div class="skill-header">
+                <img src="assets/icons/photoshop.png" alt="PhotoShop Logo" class="tech-logo-img">
+                <h3>PhotoShop</h3>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill animate-grow" style="width: 78%;"></div>
+              </div>
+              <span class="skill-percentage">78%</span>
+            </div>
+          </div>
+        
       </div>
     </section>
 
@@ -141,10 +243,36 @@
           <div class="contact-info">
             <h3>Contact Information</h3>
             <div class="info-item">
-              <div class="icon-wrapper"><svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="icon-wrapper">
+                <svg xmlns="http://w3.org" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
               <div>
                 <h4>Email</h4>
-                <a href="mailto:hello@gmail.com">hello@gmail.com</a>
+                <a href="mailto:hello@gmail.com">chamodyakathriarachchi24@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="icon-wrapper">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="icon-wrapper">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </div>
+              <div>
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">://linkedin.com</a>
               </div>
             </div>
           </div>
@@ -153,7 +281,15 @@
             <form id="contactForm" class="contact-form">
               <div class="form-group">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" required placeholder="Pedro Machado">
+                <input type="text" id="name" required placeholder="Chamodya Kathriarachchi">
+              </div>
+              <div class="form-group">
+                <label for="name">Your E-Mail</label>
+                <input type="email" id="email" required placeholder="chamodyakathriarachchi@gmail.com">
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
               </div>
               <button type="submit" class="cosmic-button" style="width: 100%;">Send Message</button>
             </form>
