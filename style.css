@@ -355,6 +355,31 @@ body.overflow-hidden {
   background-color: hsla(var(--primary), 0.1);
 }
 
+.about-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: stretch; 
+}
+
+.about-right .gradient-border,
+.about-right .card-hover,
+.about-right .card-content {
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.about-right .card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: hsl(var(--background));
+  border-radius: 0.5rem;
+}
+
 .card-content {
   background-color: hsl(var(--card));
   padding: 1.5rem;
