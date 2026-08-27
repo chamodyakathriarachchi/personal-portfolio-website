@@ -9,7 +9,18 @@
 </head>
 <body class="dark">
 
-  <div id="starBackground" class="star-bg"></div>
+  <div id="starBackground" class="star-bg">
+    <video class="bg-video-light" autoplay loop muted playsinline>
+      <source src="assets/bg/light_bg.mp4" type="video/mp4">
+    </video>
+    <video class="bg-video-dark" autoplay loop muted playsinline>
+      <source src="assets/bg/dark_bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="projectModal" class="project-modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content-img" id="modalTargetImg" src="" alt="Project Preview">
+  </div>
 
   <nav class="navbar" id="navbar">
     <div class="utility-container nav-container">

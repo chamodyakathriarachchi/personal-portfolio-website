@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const mobileNavOverlay = document.getElementById('mobileNavOverlay');
 const mobileLinks = document.querySelectorAll('.mobile-links a');
@@ -72,10 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
 const starBg = document.getElementById('starBackground');
 function generateStars() {
-  starBg.innerHTML = '';
+  const existingStars = starBg.querySelectorAll('.star');
+  existingStars.forEach(star => star.remove());
+  
   const count = Math.floor((window.innerWidth * window.innerHeight) / 10000);
   for (let i = 0; i < count; i++) {
     const star = document.createElement('div');
@@ -92,7 +92,6 @@ function generateStars() {
 }
 generateStars();
 window.addEventListener('resize', generateStars);
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const progressBars = document.querySelectorAll(".skill-bar-fill");
@@ -138,27 +137,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalImg = document.getElementById("modalTargetImg");
   const closeBtn = document.querySelector(".modal-close");
 
-  projectCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const targetCardImg = card.querySelector(".project-image-wrapper img");
-      if (targetCardImg) {
-        modal.style.display = "block";
-        modalImg.src = targetCardImg.src;
-        modalImg.alt = targetCardImg.alt || "Project Preview";
-        document.body.style.overflow = "hidden"; 
-      }
+  if (projectCards.length && modal && modalImg && closeBtn) {
+    projectCards.forEach(card => {
+      card.addEventListener("click", () => {
+        const targetCardImg = card.querySelector(".project-image-wrapper img");
+        if (targetCardImg) {
+          modal.style.display = "block";
+          modalImg.src = targetCardImg.src;
+          modalImg.alt = targetCardImg.alt || "Project Preview";
+          document.body.style.overflow = "hidden";
+        }
+      });
     });
-  });
 
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto"; 
-  });
-
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
+    closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
       document.body.style.overflow = "auto";
-    }
-  });
+    });
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
 });
