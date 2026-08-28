@@ -136,27 +136,53 @@ body.dark .star {
 }
 
 .theme-toggle {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 50;
-  transition: background-color 0.2s;
+  padding: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.2s, 
+              border-color 0.2s;
 }
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.theme-toggle .sun-icon-svg { display: block; }
+.theme-toggle .moon-icon-svg { display: none; }
+
+body.light-theme .theme-toggle {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #09090b;
+}
+
+body.light-theme .theme-toggle .sun-icon-svg { display: none; }
+body.light-theme .theme-toggle .moon-icon-svg { display: block; }
 
 .theme-toggle:hover {
-  background-color: hsla(var(--foreground), 0.05);
+  transform: scale(1.1);
 }
 
-.sun-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  color: #eab308;
+.theme-toggle:hover svg {
+  transform: rotate(25deg);
 }
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
 
 .navbar {
   position: fixed;
@@ -591,6 +617,33 @@ body.dark .star {
   display: block;
   text-align: right;
 }
+
+@keyframes skillFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.gradient-border.card-hover,
+.skill-card {
+  animation: skillFloat 3s ease-in-out infinite;
+}
+
+.skills-grid > *:nth-child(1) { animation-delay: 0.0s; }
+.skills-grid > *:nth-child(2) { animation-delay: 0.3s; }
+.skills-grid > *:nth-child(3) { animation-delay: 0.6s; }
+.skills-grid > *:nth-child(4) { animation-delay: 0.9s; }
+.skills-grid > *:nth-child(5) { animation-delay: 1.2s; }
+.skills-grid > *:nth-child(6) { animation-delay: 1.5s; }
+.skills-grid > *:nth-child(7) { animation-delay: 1.8s; }
+.skills-grid > *:nth-child(8) { animation-delay: 2.1s; }
+
 
 .section-subtitle {
   text-align: center;

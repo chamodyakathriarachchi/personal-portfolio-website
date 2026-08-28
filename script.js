@@ -3,6 +3,22 @@ themeToggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleBtn = document.getElementById("themeToggleBtn");
+  
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("light-theme");
+      if (document.body.classList.contains("light-theme")) {
+        localStorage.setItem("portfolio-theme", "light");
+      } else {
+        localStorage.setItem("portfolio-theme", "dark");
+      }
+    });
+  }
+});
+
+
 window.addEventListener('scroll', () => {
   const navbar = document.getElementById('navbar');
   if (window.scrollY > 10) {
@@ -181,6 +197,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }).catch(err => {
         console.error("Clipboard copy action interrupted: ", err);
       });
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cvBtn = document.getElementById("cvDownloadBtn");
+
+  if (cvBtn) {
+    cvBtn.addEventListener("click", (e) => {
+      console.log("Initializing dynamic CV download sequence...");
     });
   }
 });
